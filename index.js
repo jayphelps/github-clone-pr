@@ -8,7 +8,7 @@ function main(bin, script, input, directory) {
     throw new Error('Invalid arguments supplied');
   }
 
-  const inputRegExp = /https?\:\/\/github\.com\/([a-zA-Z0-9]+)\/([a-zA-Z0-9]+)\/pull\/([0-9]+)/;
+  const inputRegExp = /https?\:\/\/github\.com\/([a-zA-Z0-9_\-]+)\/([a-zA-Z0-9_\-]+)\/pull\/([0-9]+)/;
   const result = input.match(inputRegExp);
 
   if (!result) {
